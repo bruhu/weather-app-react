@@ -1,0 +1,11 @@
+textarea{
+  font-family: 'Merriweather', serif;
+  font-style: italic;
+}
+
+h3{
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  font-weight: 400;
+  padding-top: 1em;
+}
