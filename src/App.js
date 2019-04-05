@@ -13,10 +13,10 @@ class App extends Component {
         <header className="App-header">
           <Header />
         </header>
-        <body className="App-body">
+        <div className="App-body">
           <InputForm />
           <WeatherDisplay />
-        </body>
+        </div>
       </div>
     );
   }
