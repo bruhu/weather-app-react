@@ -5,7 +5,7 @@ export class Header extends Component {
   render() {
     return (
       <div>
-        <h1>Hello, Weather.</h1>
+        <p>She stared through the window at the stars.</p>
       </div>
     )
   }
