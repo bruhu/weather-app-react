@@ -3,7 +3,6 @@ import React, {
 } from 'react';
 import Header from './Header'
 import InputForm from './InputForm'
-import WeatherDisplay from './WeatherDisplay'
 import './assets/styles/App.css';
 
 class App extends Component {
@@ -15,7 +14,7 @@ class App extends Component {
         </header>
         <div className="App-body">
           <InputForm />
-          <WeatherDisplay />
+          
         </div>
       </div>
     );
