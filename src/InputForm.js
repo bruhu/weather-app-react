@@ -11,14 +11,15 @@ export class InputForm extends Component {
     };
   }
 
-//will use api example (hardcoded) until this worrrrrrks
-  componentDidMount(){
-fetch('api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=9ed85315e283641973f2df53aa78b4ad')
-.then(response => response.json())
-.then(data => this.setState({data}));
-  }
-
-  
+  //will use api example (hardcoded) until this worrrrrrks
+  componentDidMount() {
+    fetch(
+      "https://api.darksky.net/forecast/cbe750f70deec5007ab838b63c125c9c/37.8267,-122.4233"
+    )
+      // .then(response => response.json())
+      .then(response => response.json())
+      .then(response => console.log(response));
+  }git
 
   render() {
     return (
