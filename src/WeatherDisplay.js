@@ -14,3 +14,7 @@ export class WeatherDisplay extends Component {
 }
 
 export default WeatherDisplay
+
+// Useful links for this: 
+// https://blog.hellojs.org/fetching-api-data-with-react-js-460fe8bbf8f2
+// https://www.robinwieruch.de/react-fetching-data/
