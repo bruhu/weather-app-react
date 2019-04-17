@@ -11,6 +11,15 @@ export class InputForm extends Component {
     };
   }
 
+//will use api example (hardcoded) until this worrrrrrks
+  componentDidMount(){
+fetch('api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=9ed85315e283641973f2df53aa78b4ad')
+.then(response => response.json())
+.then(data => this.setState({data}));
+  }
+
+  
+
   render() {
     return (
       <div>
