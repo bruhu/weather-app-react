@@ -5,7 +5,7 @@ import Header from './components/Header'
 import InputForm from './components/InputForm'
 import './assets/styles/App.css'
 
-const API_KEY = "9ed85315e283641973f2df53aa78b4ad
+const API_KEY = "9ed85315e283641973f2df53aa78b4ad"
 class App extends Component {
   //this is a method
   getWeather = async () => {

@@ -26,6 +26,8 @@ export class InputForm extends Component {
         {/* name attribute is what we will use to fetch the values */}
         <input type="text" name="city" placeholder="City..." />
         <input type="text" name="country" placeholder="Country..." />
+        {/* do I need a button? */}
+        <button>Get weather</button>
         {/* <textarea
           rows="3"
           cols="30"
