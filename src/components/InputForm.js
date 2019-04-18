@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import WeatherDisplay from "./WeatherDisplay";
-import "./assets/styles/InputForm.css";
+import "../assets/styles/InputForm.css";
 
 export class InputForm extends Component {
   constructor(props) {

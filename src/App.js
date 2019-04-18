@@ -1,8 +1,8 @@
 import React, {
   Component
 } from 'react';
-import Header from './Header'
-import InputForm from './InputForm'
+import Header from './components/Header'
+import InputForm from './components/InputForm'
 import './assets/styles/App.css';
 
 class App extends Component {
