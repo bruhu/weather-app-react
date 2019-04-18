@@ -13,12 +13,14 @@ export class InputForm extends Component {
 
   //will use api example (hardcoded) until this worrrrrrks
   componentDidMount() {
-    fetch(
-      "https://api.darksky.net/forecast/cbe750f70deec5007ab838b63c125c9c/37.8267,-122.4233"
-    )
+    
+    // fetch(
+    //   "https://api.darksky.net/forecast/cbe750f70deec5007ab838b63c125c9c/37.8267,-122.4233"
+    // )
+    fetch("http://jsonplaceholder.typicode.com/posts")
       // .then(response => response.json())
       .then(res => res.json())
-      .then(response => console.log(response));
+      .then(posts => console.log(posts));
   }
 
   render() {
