@@ -3,13 +3,13 @@ import WeatherDisplay from "./WeatherDisplay";
 import "../assets/styles/InputForm.css";
 
 export class InputForm extends Component {
-  constructor(props) {
-    super(props);
-    //set initial state:
-    this.state = {
-      data: null
-    };
-  }
+  // constructor(props) {
+  //   super(props);
+  //   //set initial state:
+  //   this.state = {
+  //     data: null
+  //   };
+  // }
 
   // //will use api example (hardcoded) until this worrrrrrks
   // componentDidMount() {
@@ -21,7 +21,8 @@ export class InputForm extends Component {
 
   render() {
     return (
-      <div>
+      // accessing the props defined earlier on app.js and making the getWeather method accessible
+      <form onSubmit={this.props.getWeather}>
         <h3>Which city's weather do you want to check?</h3>
         {/* name attribute is what we will use to fetch the values */}
         <input type="text" name="city" placeholder="City..." />
@@ -35,7 +36,7 @@ export class InputForm extends Component {
           className="inputForm"
         /> */}
         <WeatherDisplay />
-      </div>
+      </form>
     );
   }
 }
