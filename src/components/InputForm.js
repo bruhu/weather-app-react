@@ -58,7 +58,7 @@ getWeather = async e => {
   render() {
     return (
       <React.Fragment>
-      // accessing the props defined earlier on app.js and making the getWeather method accessible
+      {/* accessing the props defined earlier on app.js and making the getWeather method accessible */}
       <form onSubmit={this.props.getWeather}>
         <h3>Which city's weather do you want to check?</h3>
         {/* name attribute is what we will use to fetch the values */}
