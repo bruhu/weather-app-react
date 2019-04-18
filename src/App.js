@@ -22,7 +22,8 @@ console.log(data);
           <Header />
         </header>
         <div className="App-body">
-          <InputForm />
+        {/* getWeather is a prop - this here will refer to app component - with this the getWeather function will be accessible from the inpustform component as well */}
+          <InputForm  getWeather={this.getWeather}/>
           
         </div>
       </div>
