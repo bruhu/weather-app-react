@@ -5,6 +5,15 @@ import "./assets/styles/App.css";
 
 const API_KEY = "9ed85315e283641973f2df53aa78b4ad";
 class App extends Component {
+  //initial state
+  state = {
+    temperature: undefined,
+    city: undefined,
+    country: undefined,
+    humidity: undefined,
+    description: undefined,
+    error: undefined
+  };
   //this is a method
   getWeather = async e => {
     e.preventDefault();
