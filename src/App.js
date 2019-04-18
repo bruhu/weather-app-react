@@ -17,15 +17,18 @@ class App extends Component {
   //this is a method
   getWeather = async e => {
     e.preventDefault();
-    //we will also use event object to get the value from inputform through the attributes - those variables will be dynamically passed onto the api call
+    //event object gets the value from inputform through the attributes - those variables will be dynamically passed onto the api call
     const city = e.target.elements.city.value;
     const country = e.target.elements.country.value;
-    //preventDefault will prevent the default behavior of all these components when we press the button = object will appear
+    //preventDefault -> prevents default behavior of all these components when button's clicked = object will appear
     const api_call = await fetch(
       `http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&APPID=${API_KEY}&units=metric`
     );
     const data = await api_call.json();
     console.log(data);
+
+    //in here we will write our state values
+    this.setState({});
   };
 
   render() {
