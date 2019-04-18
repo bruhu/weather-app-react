@@ -13,7 +13,7 @@ export class InputForm extends Component {
 
   // //will use api example (hardcoded) until this worrrrrrks
   // componentDidMount() {
-    
+
   //   fetch("http://jsonplaceholder.typicode.com/posts")
   //     .then(res => res.json())
   //     .then(posts => console.log(posts));
@@ -23,8 +23,9 @@ export class InputForm extends Component {
     return (
       <div>
         <h3>Which city's weather do you want to check?</h3>
-        <input type="text"/>
-        <input type="text"/>
+        {/* name attribute is what we will use to fetch the values */}
+        <input type="text" name="city" placeholder="City..." />
+        <input type="text" name="country" placeholder="Country..." />
         {/* <textarea
           rows="3"
           cols="30"
