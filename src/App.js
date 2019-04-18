@@ -8,6 +8,9 @@ class App extends Component {
   //this is a method
   getWeather = async e => {
     e.preventDefault();
+    //we will also use event object to get the value from inputform through the attributes
+    const city = e.target.elements.name.city.value;
+    const country = e.target.elements.name.country.value;
     //preventDefault will prevent the default behavior of all these components when we press the button = object will appear
     const api_call = await fetch(
       `http://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=${API_KEY}&units=metric`
