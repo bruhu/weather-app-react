@@ -14,4 +14,3 @@ export class WeatherDisplay extends Component {
 }
 
 export default WeatherDisplay;
-

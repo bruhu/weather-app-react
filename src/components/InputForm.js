@@ -21,6 +21,7 @@ export class InputForm extends Component {
 
   render() {
     return (
+      <React.Fragment>
       // accessing the props defined earlier on app.js and making the getWeather method accessible
       <form onSubmit={this.props.getWeather}>
         <h3>Which city's weather do you want to check?</h3>
@@ -35,8 +36,10 @@ export class InputForm extends Component {
           placeholder="Write your wanted location here"
           className="inputForm"
         /> */}
-        <WeatherDisplay />
+      
       </form>
+        <WeatherDisplay />
+        </React.Fragment>
     );
   }
 }
