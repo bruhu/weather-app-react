@@ -28,7 +28,14 @@ class App extends Component {
     console.log(data);
 
     //in here we will write our state values
-    this.setState({});
+    this.setState({
+      temperature: data.main.temp,
+      city: data.name,
+      country: data.sys.country,
+      humidity: data.main.humidity,
+      description: data.weather[0].description,
+      error: ""
+    });
   };
 
   render() {
