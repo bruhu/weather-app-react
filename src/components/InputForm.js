@@ -23,12 +23,14 @@ export class InputForm extends Component {
     return (
       <div>
         <h3>Which city's weather do you want to check?</h3>
-        <textarea
+        <input type="text"/>
+        <input type="text"/>
+        {/* <textarea
           rows="3"
           cols="30"
           placeholder="Write your wanted location here"
           className="inputForm"
-        />
+        /> */}
         <WeatherDisplay />
       </div>
     );
