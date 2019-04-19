@@ -2,4 +2,19 @@ h1{
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   padding: 2em;
+  
+}
+
+
+/* thank you internet for this <3 */
+.header-h1 {
+  -webkit-animation: color_change 1s infinite alternate;
+	-moz-animation: color_change 1s infinite alternate;
+	-ms-animation: color_change 1s infinite alternate;
+	-o-animation: color_change 1s infinite alternate;
+  animation: color_change 1s infinite alternate;
+}
+@-webkit-keyframes color_change {
+	from { color: hotpink; }
+	to { color: rgb(229, 255, 0); }
 }

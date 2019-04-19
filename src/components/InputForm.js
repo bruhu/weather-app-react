@@ -11,7 +11,6 @@ export class InputForm extends Component {
           <h3>Which city's weather do you want to check?</h3>
           {/* name attribute is what we will use to fetch the values */}
           <input type="text" name="city" placeholder="City..." />
-          <br />
           <input type="text" name="country" placeholder="Country..." />
           <br />
           {/* do I need a button? */}

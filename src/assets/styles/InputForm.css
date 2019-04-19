@@ -1,11 +1,58 @@
-textarea{
-  font-family: 'Merriweather', serif;
+textarea {
+  font-family: "Merriweather", serif;
   font-style: italic;
 }
 
-h3{
-  font-family: 'Montserrat', sans-serif;
+h3 {
+  font-family: "Montserrat", sans-serif;
   color: white;
   font-weight: 400;
   padding-top: 1em;
+}
+
+input {
+  margin: 0.5em;
+  font-family: "Merriweather", serif;
+  padding: 7.2px 14.4px;
+  border-radius: 3px;
+  border: none;
+}
+
+input:focus {
+  background-color: rgb(245, 222, 180);
+}
+
+input::placeholder {
+  font-family: "Merriweather", serif;
+  font-style: italic;
+}
+
+button {
+  font-family: "Montserrat", sans-serif;
+  margin-top: 1em;
+  background-color: rgb(86, 94, 99);
+  border: none;
+  color: white;
+  padding: 18px 36px;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+button:hover {
+  color: black;
+  -webkit-animation: background_color_change 1s infinite alternate;
+  -moz-animation: background_color_change 1s infinite alternate;
+  -ms-animation: background_color_change 1s infinite alternate;
+  -o-animation: background_color_change 1s infinite alternate;
+  animation: background_color_change 1s infinite alternate;
+}
+
+@-webkit-keyframes background_color_change {
+  from {
+    background-color: hotpink;
+  }
+  to {
+    background-color: rgb(229, 255, 0);
+  }
 }

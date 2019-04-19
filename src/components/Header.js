@@ -1,15 +1,16 @@
-import React, { Component } from 'react'
-import '../assets/styles/Header.css'
+import React, { Component } from "react";
+import "../assets/styles/Header.css";
 
 export class Header extends Component {
   render() {
     return (
       <div>
-        
-        <h1><i className="fas fa-bolt"></i> Hello, weather!</h1>
+        <h1 className="header-h1">
+          <i className="fas fa-bolt" /> Hello, weather!
+        </h1>
       </div>
-    )
+    );
   }
 }
 
-export default Header
+export default Header;
