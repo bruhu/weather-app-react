@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "../assets/styles/WeatherDisplay.css";
 
+// a stateless component could also be written without a class - and it goes like this:
 export class WeatherDisplay extends Component {
   render() {
     return (
