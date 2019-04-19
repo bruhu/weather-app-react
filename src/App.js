@@ -29,16 +29,27 @@ class App extends Component {
     );
     const data = await api_call.json();
 
-    //in here we will write our state values
-    this.setState({
-      temperature: data.main.temp,
-      city: data.name,
-      country: data.sys.country,
-      humidity: data.main.humidity,
-      description: data.weather[0].description,
-      error: ""
-    });
-    console.log(this.props.city);
+    //in here we will write our state values -- if statement to trigger the re-render only when we enter a value - else makes use of the error in case the values are incorrect
+    if (city && country) {
+      this.setState({
+        temperature: data.main.temp,
+        city: data.name,
+        country: data.sys.country,
+        humidity: data.main.humidity,
+        description: data.weather[0].description,
+        error: ""
+      });
+    } else {
+      this.setState({
+        //undefined bc we don't need all these values if we access a false event
+        temperature: undefined,
+        city: undefined,
+        country: undefined,
+        humidity: undefined,
+        description: undefined,
+        error: "Please enter a value."
+      });
+    }
   };
 
   render() {

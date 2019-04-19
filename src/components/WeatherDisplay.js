@@ -18,6 +18,8 @@ export class WeatherDisplay extends Component {
         {this.props.description && (
           <h3>Conditions: {this.props.description} </h3>
         )}
+        {/* and in case of error: */}
+        {this.props.error && <p>{this.props.error}</p>}
       </React.Fragment>
     );
   }
