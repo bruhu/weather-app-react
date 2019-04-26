@@ -25,12 +25,12 @@ class App extends Component {
     const country = e.target.elements.country.value;
     //preventDefault -> prevents default behavior of all these components when button's clicked = object will appear
     const api_call = await fetch(
-      `http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&APPID=${API_KEY}&units=metric`
+      `https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&APPID=${API_KEY}&units=metric`
     );
     const data = await api_call.json();
-
+    console.log(data);
     //in here we will write our state values -- if statement to trigger the re-render only when we enter a value - else makes use of the error in case the values are incorrect
-    if (city && country) {
+    if (!data.message) {
       this.setState({
         temperature: data.main.temp,
         city: data.name,
@@ -39,15 +39,13 @@ class App extends Component {
         description: data.weather[0].description,
         error: ""
       });
-    } else {
+    } else if (!city || !country) {
       this.setState({
-        //undefined bc we don't need all these values if we access a false event
-        temperature: undefined,
-        city: undefined,
-        country: undefined,
-        humidity: undefined,
-        description: undefined,
         error: "Please enter a value."
+      });
+    } else if (data.message) {
+      this.setState({
+        error: "City not found"
       });
     }
   };
