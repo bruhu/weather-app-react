@@ -9,15 +9,25 @@ export class InputForm extends Component {
   };
   onChange = e => {
     this.setState({
-      city: e.target.value
+      [e.target.name]: e.target.value
     });
+  };
+
+  onSubmit = e => {
+    e.preventDefault();
+    // const city = this.state.city
+    // const country = this.state.country
+    const { city, country } = this.state;
+    const { getWeather } = this.props;
+    getWeather(city, country);
+    this.setState({ city: "", country: "" });
   };
 
   render() {
     return (
       <React.Fragment>
         {/* accessing the props defined earlier on app.js and making the getWeather method accessible */}
-        <form onSubmit={this.props.getWeather}>
+        <form onSubmit={this.onSubmit}>
           <h3>Which city's weather do you want to check?</h3>
           {/* name attribute is what we will use to fetch the values */}
           <input
@@ -34,6 +44,7 @@ export class InputForm extends Component {
             placeholder="Country..."
             required
             value={this.state.country}
+            onChange={this.onChange}
           />
           <br />
           {/* do I need a button? */}
