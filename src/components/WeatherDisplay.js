@@ -8,19 +8,34 @@ export class WeatherDisplay extends Component {
       <React.Fragment>
         {/* conditional operator -> when both conditions meet, it'll render the whole JSX ONLY when button is pressed */}
         {this.props.city && this.props.country && (
-          <h3>
-            Location: {this.props.city}, {this.props.country}
-          </h3>
+          <div className="weather-row">
+            <div>Location:</div>
+            <div>
+              {this.props.city}, {this.props.country}
+            </div>
+          </div>
         )}
         {this.props.temperature && (
-          <h3>Temperature: {this.props.temperature}°C</h3>
+          <div className="weather-row">
+            <h3>Temperature: {this.props.temperature}°C</h3>
+          </div>
         )}
-        {this.props.humidity && <h3>Humidity: {this.props.humidity}% </h3>}
+        {this.props.humidity && (
+          <div className="weather-row">
+            <h3>Humidity: {this.props.humidity}% </h3>
+          </div>
+        )}
         {this.props.description && (
-          <h3>Conditions: {this.props.description} </h3>
+          <div className="weather-row">
+            <h3>Conditions: {this.props.description}</h3>
+          </div>
         )}
         {/* and in case of error: */}
-        {this.props.error && <p className="error-paragraph">{this.props.error}</p>}
+        {this.props.error && (
+          <div className="weather-row">
+            <p className="error-paragraph">{this.props.error}</p>
+          </div>
+        )}
       </React.Fragment>
     );
   }
