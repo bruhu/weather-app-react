@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://bruhu.github.io/weather-app-react",
   "dependencies": {
+    "eslint-utils": "^1.4.2",
     "gh-pages": "^2.0.1",
     "lodash": "^4.17.14",
     "lodash.mergewith": "^4.6.2",
